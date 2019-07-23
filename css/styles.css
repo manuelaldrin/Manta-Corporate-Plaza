@@ -859,6 +859,7 @@ body{
 		width: calc(100% - 120px);
 		padding-left: 10px;
 		font-size: 13px;
+		color: #505244;
 	}
 
 	.footer-credits{
@@ -868,7 +869,7 @@ body{
 
 	.footer-bottom{
 		padding: 30px 0 15px;
-		background: #66685c;
+		background: #eae8e5;
 	}
 
 /* Contact Form */
