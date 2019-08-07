@@ -61,6 +61,11 @@
 		}, function() {
 			jQuery('#' + jQuery(this).attr('data-id')).css('opacity','0');       
 		});
+
+		$('.mobile-menu').click(function(e){
+			e.preventDefault();
+				$('.mobile-nav-wrap').slideToggle("slow");
+			});
 		
 		
 		// jQuery.fn.extend({
