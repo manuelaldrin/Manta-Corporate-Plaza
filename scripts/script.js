@@ -47,10 +47,10 @@
 	        return false;
 		});
 
-		$('.learnmore-btn').click(function(e){
+		$('.slideshow-link a, .inquire-link a').click(function(e){
 			e.preventDefault();
 			$("html, body").animate({ 
-			  scrollTop: $('.about-wrap').offset().top - 50
+			  scrollTop: $('.footer-wrap').offset().top - 50
 			}, "slow"); 
 		}) 
 

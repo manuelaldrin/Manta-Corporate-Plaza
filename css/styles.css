@@ -189,22 +189,49 @@ body{
 		cursor: default;
 	}
 
+/* Fixed Header */
+.header-wrap.fh {
+    background: #66685c;
+    padding: 10px 0;
+}
+
+.header-wrap.fh .header-logo img{
+	max-width: 70px;
+	margin: auto;
+	display: block;
+}
+
+.header-wrap.fh .nav li {
+    padding: 18px 0;
+}
+
 
 /* Header */
 .header-wrap{
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
-	z-index: 1030;
+	z-index: 1035;
 	padding: 50px 0 0;
+	background: transparent;
 }
+
+	.header-logo img{
+		max-width: 165px;
+		width: 100%;
+		margin: auto;
+	}
 
 	/* Header Nav */
 	.nav li {
 		display: inline-block;
 		vertical-align: top;
 		padding: 40px 0 0;
+		transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
 	}
 
 	.nav li a{
@@ -214,10 +241,19 @@ body{
 		text-transform: uppercase;
 		letter-spacing: 5px;
 		line-height: 1;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-o-transition: all 0.3s;
 	}
 
 	.header-nav-right{
 		text-align: right;
+	}
+
+	.nav>li>a:focus, .nav>li>a:hover {
+		text-decoration: none;
+		background-color: #f7b423;
+		color: #fff;
 	}
 
 
@@ -259,7 +295,7 @@ body{
 		left: 0;
 		width: 100%;
 		top: 370px;
-		z-index: 2000;
+		z-index: 200;
 		text-align: center;
 		color: #fff;
 		font-size: 60px;
@@ -606,7 +642,7 @@ body{
 		position: relative;
 		text-align: center;
 		padding-bottom: 55px;
-		margin: 0 0 70px;
+		margin: 0 0 0;
 	}
 
 	.location-label h2 {
@@ -954,6 +990,224 @@ body{
 		text-transform: uppercase;
 		border-bottom: 1px solid #fff;
 		margin-bottom: 35px;
+	}
+
+
+/* Innerpages - Building */
+.innerpage-banner {
+    position: relative;
+    font-size: 0;
+    background: #000;
+}
+
+	.innerpage-banner canvas {
+		height: 335px;
+		width: 100%;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		opacity: 0.5;
+	}
+
+
+	.innerpage-content-wrap{
+		min-height: 500px;
+		padding: 50px 0;
+	}
+
+	.innerpage-label {
+		position: relative;
+		font-size: 29px;
+		font-weight: 400;
+		padding-left: 50px;
+		padding-bottom: 5px;
+		color: #606060;
+		margin-bottom: 30px;
+		border-bottom: 1px solid #65665e;
+
+	}
+  
+	.innerpage-label::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 40px;
+		height: 40px;
+		background: url('../images/manta-corporate-plaza.jpg') no-repeat center left / cover;
+	}
+  
+	.obs-label {
+		color: #fff;
+		background: #66685c;
+		padding-left: 30px !important;
+	}
+  
+	.obs-value {
+		color: #505244;
+		text-transform: uppercase;
+		padding-left: 30px !important;
+		background: transparent;
+	}
+  
+	.office-bldg-spec-table{
+	  position: relative;
+	  font-size: 17px;
+	  margin: 0 0 50px;
+	}
+  
+	.office-bldg-spec-table>tbody>tr>td{
+	  border-top: 1px solid #ccc;
+	  cursor: default;
+	}
+  
+	.office-bldg-spec-table>tbody>tr:first-child>td{
+	  border-top: 0;
+	}
+  
+	.office-bldg-spec-table>tbody>tr:hover,
+	.office-bldg-spec-table>tbody>tr:hover .obs-label,
+	.office-bldg-spec-table>tbody>tr:hover .obs-value{
+		background: #f7b423 !important;
+	}
+  
+	.office-bldg-spec-table>tbody>tr:hover .obs-value{
+	  color: #fff;
+	}
+
+	.inquire-link a {
+		display: block;
+		max-width: 330px;
+		width: 100%;
+		margin: auto;
+		height: 72px;
+		line-height: 72px;
+		font-size: 30px;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 400;
+		color: #f7b423;
+		background: #66685c;
+		border: 1px solid #66685c;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		border-radius: 10px;
+	}
+
+	.office-bldg-note {
+		font-size: 15px;
+		font-style: italic;
+		color: #66685c;
+		margin: 0 0 10px;
+	}
+
+
+/* Innerpages - Location */
+#map {
+    height: 500px;
+}
+
+	.location-content-item {
+		padding: 50px 15px;
+		background: #9a9484;
+		color: #fff;
+		border-bottom: 5px solid #d6d2cb;
+		box-shadow: 15px 15px 0 rgba(102, 102, 92, 0.3);
+		min-height: 280px;
+		margin: 20px -5px;
+		position: relative;
+	}
+
+
+	.location-content-item-2 {
+		background: #a9a18c;
+	}
+
+	.location-content-item-3 {
+		background: #65675e;
+	}
+
+	.innerpage-content-wrap .location-label{
+		min-height: 170px;
+		font-size: 23px;
+		font-weight: 400;
+	}
+
+	.innerpage-content-wrap .location-label::before,
+	.innerpage-content-wrap .location-label::after{
+		background: #fff;
+	}
+
+	.map-content {
+		padding: 50px 0;
+	}
+
+	.location-vicinity-map img{
+		margin: auto;
+	}
+
+	.map-address {
+		text-align: center;
+		font-size: 20px;
+		padding: 10px 0;
+		color: #66685c;
+		font-style: italic;
+	}
+
+	.map-address a{
+		color: #66685c;
+	}
+
+/* Innerpages - Contact */
+.cd-field{
+	margin-bottom: 10px;
+}
+
+	.cd-field i {
+		font-size: 26px;
+		height: 65px;
+		width: 65px;
+		text-align: center;
+		line-height: 65px;
+		background: #d6d2cb;
+		color: #66665c;
+	}
+
+	.cd-field span {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 18px;
+		margin-left: 20px;
+	}
+
+	.cd-field a{
+		color: #66665c;
+	}
+
+	.cd-contact {
+		font-size: 26px;
+		height: 65px;
+		text-align: center;
+		line-height: 65px;
+		background: #66665c;
+		color: #f7b423 !important;
+		display: inline-block;
+		padding: 0 25px;
+		text-transform: uppercase;
+	}
+
+	.cd-field h2 {
+		color: #505244;
+		font-size: 28px;
+		margin: 0 0 10px;
+		line-height: 1;
+	}
+	
+	.cd-field h3 {
+		margin: 0 0 30px;
+		font-size: 20px;
+		font-weight: 400;
+		color: #505244;
 	}
 
 /* Media Queries */
